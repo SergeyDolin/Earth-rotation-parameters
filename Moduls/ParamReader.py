@@ -1,6 +1,4 @@
-
-
-
+import numpy as np
 
 # Return (dlnpr) (Point 1.1)
 def Param4():
@@ -10,6 +8,7 @@ def Param4():
                 return 90, float(read) * 365.25
     except IOError:
         print("Error file")
+
 
 # (Point 1.2-3)
 def rdk():
@@ -31,3 +30,12 @@ def rdk():
             return ret
     except IOError:
         print("Error file")
+
+
+def DecodeParam2():
+    ff = rdk()
+    ng = 250    # Harmonic number
+    nput = int(100*len(ff)+0.5)
+    for i in range(nput):
+        for j in range(ng):
+            perut[i][j] = 1 / ff[]
